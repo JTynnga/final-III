@@ -13,3 +13,5 @@ su clave alumno
 
 la base de datos esta en la carpeta design
 uni.sql
+
+por favor vuelva a instalarla ...
