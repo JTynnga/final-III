@@ -36,7 +36,7 @@ CREATE TABLE `classes` (
 
 LOCK TABLES `classes` WRITE;
 /*!40000 ALTER TABLE `classes` DISABLE KEYS */;
-INSERT INTO `classes` VALUES (15,'12 monos'),(7,'Algebra'),(14,'Aritmética'),(13,'Artistica'),(1,'Biología'),(2,'Biomedicina'),(8,'Ciencia de materiales'),(9,'Ciencias Ambientales'),(10,'Ciencias Básicas'),(11,'Ciencias de la tierra'),(5,'Geometria'),(3,'Guarani'),(16,'Quiropractia'),(6,'Trigonometría');
+INSERT INTO `classes` VALUES (15,'php para principiantes'),(7,'Algebra'),(14,'Aritmética'),(13,'Artistica'),(1,'Biología'),(2,'Biomedicina'),(8,'Ciencia de materiales'),(9,'Ciencias Ambientales'),(10,'Ciencias Básicas'),(11,'Ciencias de la tierra'),(5,'Geometria'),(3,'Guarani'),(16,'Quiropractia'),(6,'Trigonometría');
 /*!40000 ALTER TABLE `classes` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -76,7 +76,7 @@ CREATE TABLE `info` (
 
 LOCK TABLES `info` WRITE;
 /*!40000 ALTER TABLE `info` DISABLE KEYS */;
-INSERT INTO `info` VALUES (1,'admin','admon','admin@admin','admin','','0000-00-00',NULL,1,72375285,1),(2,'profesor','4','profe@gmail.com','123','Calle los profesores','2013-04-10',1,1,79999985,2),(3,'alumno01','','alumno01@gmail.com','111','','2023-08-01',NULL,1,9998965,3),(4,'Roberto Rojas','Gomez Bolaños','alumno02@gmail.com','123','Calle del 844','2023-07-19',NULL,1,7237117,3),(5,'alumno03','Juan','alumno@alumno','alumno','Calle 03','2013-05-02',NULL,1,7288285,3),(9,'Alexander','Morales','alexmorales196@gmail.com','','Calle los Laureles','1999-06-16',NULL,1,NULL,2),(11,'profe02','sor','maestro@maestro','maestro','los colifores','0000-00-00',2,1,NULL,2),(30,'Jorge','Soto','profesor03daada@gmail.com','123','','0000-00-00',NULL,1,NULL,2),(31,'Profesor Sin asig','pipipi','sinasign@gmail.com','','Jr. Los Proceres N° 458 - Urb. 09 de Abril - Tarapoto','2023-08-09',15,1,NULL,2),(32,'Profesor05','Prueba05','nuevosin@gmail.com','nuevo2','','0000-00-00',NULL,1,NULL,2);
+INSERT INTO `info` VALUES (1,'admin','administrador','admin@admin','admin','','0000-00-00',NULL,1,72375285,1),(2,'profesor','4','profe@gmail.com','123','Calle los profesores','2013-04-10',1,1,79999985,2),(3,'alumno01','','alumno01@gmail.com','111','','2023-08-01',NULL,1,9998965,3),(4,'herbert','orellana','alumno02@gmail.com','123','Calle del 844','2023-07-19',NULL,1,7237117,3),(5,'alumno03','Juan','alumno@alumno','alumno','Calle 03','2013-05-02',NULL,1,7288285,3),(9,'jorge','soto','jorgesoto@gmail.com','','Calle topacios','1999-06-16',NULL,1,NULL,2),(11,'profe02','sor','maestro@maestro','maestro','los colifores','0000-00-00',2,1,NULL,2),(30,'Jorge','Soto','profesor03daada@gmail.com','123','','0000-00-00',NULL,1,NULL,2),(31,'Profesor Sin asig','pipipi','sinasign@gmail.com','','Jr. Los Proceres N° 458 - Urb. 09 de Abril - Tarapoto','2023-08-09',15,1,NULL,2),(32,'Profesor05','Prueba05','nuevosin@gmail.com','nuevo2','','0000-00-00',NULL,1,NULL,2);
 /*!40000 ALTER TABLE `info` ENABLE KEYS */;
 UNLOCK TABLES;
 
