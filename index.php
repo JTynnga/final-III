@@ -15,8 +15,7 @@
 
 </head>
 
-<body style="background: linear-gradient(90deg, rgba(39,70,154,1) 0%, rgba(17,144,205,1) 100%);"
-    class=" dark:bg-gray-900 h-screen w-screen  flex flex-col justify-center items-center">
+<body class=" dark:bg-gray-600 h-screen w-screen  flex flex-col justify-center items-center">
 
     <div class="  flex flex-col justify-center items-center h-full md:h-[480px] w-screen  md:w-96 ">
 
