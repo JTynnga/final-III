@@ -22,6 +22,7 @@ const Uni = document.getElementById("Uni");
 const MENU_AD = document.getElementById("MENU_AD");
 const pPermisos = document.getElementById("pPermisos");
 const pMaestros = document.getElementById("pMaestros");
+const pUsers = document.getElementById("pUsers");
 const pAlumnos = document.getElementById("pAlumnos");
 const pClases = document.getElementById("pClases");
 const pCalificaciones = document.getElementById("pCalificaciones");
@@ -42,6 +43,7 @@ btnTree.addEventListener("click", () => {
     CARGO.classList.toggle("md:flex");
     Uni.classList.toggle("md:flex");
     MENU_AD.classList.toggle("md:flex");
+    pUsers.classList.toggle("md:flex");
     pPermisos.classList.toggle("md:flex");
     pMaestros.classList.toggle("md:flex");
     pAlumnos.classList.toggle("md:flex");
@@ -51,13 +53,8 @@ btnTree.addEventListener("click", () => {
     pAlumnos002.classList.toggle("md:flex");
 });
 
-// document.getElementById("btnSubmit").addEventListener("click", function () {
-//     setTimeout(function () {
-//         document.getElementById("messageError").classList.add("hidden");
-//     }, 2000);
-// });
-
 //Botones del menu izquierdo
+const btnUsers = document.getElementById("btnUsers");
 const btnPermisos = document.getElementById("btnPermisos");
 const btnMaestros = document.getElementById("btnMaestros");
 const btnAlumnos = document.getElementById("btnAlumnos");
@@ -69,6 +66,7 @@ const btnAdminis = document.getElementById("btnAdminis");
 const btnAlumnos002 = document.getElementById("btnAlumnos002");
 
 const secBienvenida = document.getElementById("sectionBienvenida");
+const secUsers = document.getElementById("sectionUsers");
 const secPermisos = document.getElementById("sectionPermisos");
 const secMaestros = document.getElementById("sectionMaestros");
 const secAlumnos = document.getElementById("sectionAlumnos");
@@ -80,10 +78,30 @@ const secAdminis = document.getElementById("sectionAdminis");
 const sectionEdit = document.getElementById("sectionEditar");
 const sectionAlumnosDelProfe = document.getElementById("sectionAlumnosDelProfe");
 
+btnUsers.addEventListener("click", () => {
+    secUsers.classList.remove("hidden");
+
+    secMaestros.classList.add("hidden");
+    secBienvenida.classList.add("hidden");
+    secPermisos.classList.add("hidden");
+    secAlumnos.classList.add("hidden");
+    secClases.classList.add("hidden");
+    sectionEdit.classList.add("hidden");
+    document.getElementById("title01").innerHTML = "Usuarios";
+    document.getElementById("title02").innerHTML = "Usuarios";
+    toggleBar.classList.add("collapse");
+    if (spin == true) {
+        toggleSpin.style.transform = "rotate(180deg)";
+    } else if (spin == false) {
+        toggleSpin.style.transform = "rotate(0deg)";
+    }
+});
+
 btnPermisos.addEventListener("click", () => {
     secPermisos.classList.remove("hidden");
     // secPermisos.classList.add("flex");
     secBienvenida.classList.add("hidden");
+    secUsers.classList.add("hidden");
     secMaestros.classList.add("hidden");
     secAlumnos.classList.add("hidden");
     secClases.classList.add("hidden");
@@ -101,8 +119,8 @@ btnPermisos.addEventListener("click", () => {
 
 btnMaestros.addEventListener("click", () => {
     secMaestros.classList.remove("hidden");
-
     secBienvenida.classList.add("hidden");
+    secUsers.classList.add("hidden");
     secPermisos.classList.add("hidden");
     secAlumnos.classList.add("hidden");
     secClases.classList.add("hidden");
@@ -123,6 +141,7 @@ btnAlumnos.addEventListener("click", () => {
 
     secBienvenida.classList.add("hidden");
     secPermisos.classList.add("hidden");
+    secUsers.classList.add("hidden");
     secMaestros.classList.add("hidden");
     secClases.classList.add("hidden");
     sectionEdit.classList.add("hidden");
@@ -142,6 +161,7 @@ btnClases.addEventListener("click", () => {
 
     secBienvenida.classList.add("hidden");
     secPermisos.classList.add("hidden");
+    secUsers.classList.add("hidden");
     secMaestros.classList.add("hidden");
     secAlumnos.classList.add("hidden");
     sectionEdit.classList.add("hidden");
@@ -196,6 +216,7 @@ btnProfile.addEventListener("click", () => {
     sectionEdit.classList.remove("hidden");
 
     secBienvenida.classList.add("hidden");
+    secUsers.classList.add("hidden");
     secMaestros.classList.add("hidden");
     secAlumnos.classList.add("hidden");
     secClases.classList.add("hidden");
