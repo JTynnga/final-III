@@ -27,7 +27,7 @@ CREATE TABLE `classes` (
   `name_class` varchar(250) NOT NULL,
   PRIMARY KEY (`id_class`),
   UNIQUE KEY `UNIQUE_name_class` (`name_class`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -36,7 +36,7 @@ CREATE TABLE `classes` (
 
 LOCK TABLES `classes` WRITE;
 /*!40000 ALTER TABLE `classes` DISABLE KEYS */;
-INSERT INTO `classes` VALUES (15,'12 monos'),(7,'Algebra'),(14,'Aritmética'),(13,'Artistica'),(1,'Biología'),(2,'Biomedicina'),(8,'Ciencia de materiales'),(9,'Ciencias Ambientales'),(10,'Ciencias Básicas'),(11,'Ciencias de la tierra'),(5,'Geometria'),(3,'Guarani'),(16,'Quiropractia'),(6,'Trigonometría');
+INSERT INTO `classes` VALUES (7,'Algebra'),(14,'Aritmética'),(13,'Artistica'),(16,'astronomia'),(1,'Biología'),(2,'Biomedicina'),(8,'Ciencia de materiales'),(9,'Ciencias Ambientales'),(10,'Ciencias Básicas'),(11,'Ciencias de la tierra'),(5,'Geometria'),(3,'Guarani'),(17,'laravel nivel i'),(15,'lenguaje y literatura'),(6,'Trigonometría');
 /*!40000 ALTER TABLE `classes` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -61,13 +61,10 @@ CREATE TABLE `info` (
   `id_rol` int(6) NOT NULL,
   PRIMARY KEY (`id_info`),
   UNIQUE KEY `UNIQUE_email` (`email`) USING BTREE,
-  UNIQUE KEY `UNIQUE_DNI` (`DNI`) USING BTREE,
-  KEY `FK_info_id_rol` (`id_rol`),
-  KEY `FK_teacher_class` (`teacher_class`),
-  CONSTRAINT `FK_info_id_rol` FOREIGN KEY (`id_rol`) REFERENCES `roles` (`id_rol`),
-  CONSTRAINT `FK_teacher_class` FOREIGN KEY (`teacher_class`) REFERENCES `classes` (`id_class`),
-  CONSTRAINT `FK_teacher_class_id_class` FOREIGN KEY (`teacher_class`) REFERENCES `classes` (`id_class`)
-) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  UNIQUE KEY `id_info_2` (`id_info`),
+  UNIQUE KEY `id_info` (`id_info`) USING BTREE,
+  UNIQUE KEY `UNIQUE_DNI` (`DNI`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -76,7 +73,7 @@ CREATE TABLE `info` (
 
 LOCK TABLES `info` WRITE;
 /*!40000 ALTER TABLE `info` DISABLE KEYS */;
-INSERT INTO `info` VALUES (1,'admin','admon','admin@admin','admin','','0000-00-00',NULL,1,72375285,1),(2,'profesor','4','profe@gmail.com','123','Calle los profesores','2013-04-10',1,1,79999985,2),(3,'alumno01','','alumno01@gmail.com','111','','2023-08-01',NULL,1,9998965,3),(4,'Roberto Rojas','Gomez Bolaños','alumno02@gmail.com','123','Calle del 844','2023-07-19',NULL,1,7237117,3),(5,'alumno03','Juan','alumno@alumno','alumno','Calle 03','2013-05-02',NULL,1,7288285,3),(9,'Alexander','Morales','alexmorales196@gmail.com','','Calle los Laureles','1999-06-16',NULL,1,NULL,2),(11,'profe02','sor','maestro@maestro','maestro','los colifores','0000-00-00',2,1,NULL,2),(30,'Jorge','Soto','profesor03daada@gmail.com','123','','0000-00-00',NULL,1,NULL,2),(31,'Profesor Sin asig','pipipi','sinasign@gmail.com','','Jr. Los Proceres N° 458 - Urb. 09 de Abril - Tarapoto','2023-08-09',15,1,NULL,2),(32,'Profesor05','Prueba05','nuevosin@gmail.com','nuevo2','','0000-00-00',NULL,1,NULL,2);
+INSERT INTO `info` VALUES (2,'profesor','4','profe@gmail.com','','Calle los profesores','2013-04-10',1,1,79999985,2),(3,'rolando','reategui','alumno01@gmail.com','','Jr. Los Proceres N° 458 - Urb. 09 de Abril - Tarapoto','2023-08-01',NULL,1,9998965,3),(4,'herbert','orellana','alumno02@gmail.com','herbert','Calle sin nombre y sin numero','2023-07-19',NULL,1,7237117,3),(5,'alumno03','Juan','alumno@alumno','alumno','Calle 03','2013-05-02',NULL,1,7288285,3),(11,'profe02','sor','maestro@maestro','','los colifores','0000-00-00',2,1,NULL,2),(33,'jose teodoro','ynga chiroque','jose.ynga@gmail.com','','Jr. Los Proceres N° 458 - Urb. 09 de Abril - Tarapoto','2023-08-25',NULL,1,1149518,3),(36,'jose','ynga','admin@admin','admin','jr. los floripondios 555','1964-01-01',1,1,56598945,1),(37,'joaquin','sabina','joaquin@joaquin','','Jr. Los Proceres N° 458 - Urb. 09 de Abril - Tarapoto','2023-08-09',NULL,1,NULL,0),(38,'ursula','jimenez','ursula@ursula','123','Jr. Los Proceres N° 458 - Urb. 09 de Abril - Tarapoto','2023-08-01',NULL,1,NULL,0);
 /*!40000 ALTER TABLE `info` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -130,7 +127,7 @@ CREATE TABLE `roles` (
 
 LOCK TABLES `roles` WRITE;
 /*!40000 ALTER TABLE `roles` DISABLE KEYS */;
-INSERT INTO `roles` VALUES (1,'ADMIN'),(3,'ALUMNO'),(2,'MAESTRO');
+INSERT INTO `roles` VALUES (1,'ADMINISTRADOR'),(3,'ALUMNO'),(2,'MAESTRO');
 /*!40000 ALTER TABLE `roles` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -143,4 +140,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-08-10 15:51:00
+-- Dump completed on 2023-08-11 15:58:23
